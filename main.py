@@ -17,6 +17,7 @@ from common.bot_cmds_list import bot_commands
 
 load_dotenv(find_dotenv())
 
+#нужно создать файл '.env' как в примере '.env.example'
 bot = Bot(token=os.getenv('TOKEN'), default=DefaultBotProperties(parse_mode=ParseMode.MARKDOWN))
 dp = Dispatcher(fsm_strategy=FSMStrategy.CHAT) #стратегия - состояние чата как одного человека
 dp.include_router(router)
